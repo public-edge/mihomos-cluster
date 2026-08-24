@@ -1,0 +1,20 @@
+apiVersion: governance.re8ch.com/v1alpha1
+kind: ClusterResourceIndex
+metadata:
+  name: mihomos-cluster
+spec:
+  controlPlane:
+    repository: git@gitlab.com:reachievellc/service-backend.git
+    revision: main
+    indexPath: indexes/deployments.json
+  lookup:
+    module: mihomos-cluster
+    catalog: platform
+    declaredDeployments:
+    - mihomos
+  evidence:
+    authority: kubernetes
+    requiredPlanes:
+    - monitoring
+    - deploying
+    - planning
