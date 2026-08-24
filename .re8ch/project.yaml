@@ -1,0 +1,22 @@
+apiVersion: governance.re8ch.com/v1alpha1
+kind: ProjectBinding
+metadata:
+  name: mihomos-cluster
+spec:
+  parent:
+    catalog: platform
+    repository: git@gitlab.com:reachievellc/service-backend.git
+    catalogPath: catalogs/platform/modules/mihomos-cluster
+    submodulePath: catalogs/platform/modules/mihomos-cluster/source
+  identity:
+    maintainerAddress: mihomos-cluster-maintain@phonaid.com
+    accountClass: project-maintainer
+    googleWorkspacePolicy: eligible
+  workspace:
+    name: mihomos-cluster-maintain
+    oneActivePerAccount: true
+    branchPrefix: workspace/mihomos-cluster-maintain/
+  contract:
+    transport: branch-pull-request
+    completion: pull-request-closed
+    evidenceAuthority: kubernetes
