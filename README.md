@@ -1,5 +1,12 @@
 # Mihomos Cluster
 
+[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/mihomos-cluster)](https://artifacthub.io/packages/search?repo=mihomos-cluster)
+
+The chart is published as a conventional Helm repository at
+`https://re8ch.github.io/mihomos-cluster/index.yaml` so Artifact Hub does not
+depend on GHCR registry availability while indexing. The OCI chart remains
+available as an alternative installation source.
+
 Mihomos Cluster is a Kubernetes egress fabric in which every labelled node
 consumes a node-local Mihomo proxy and selected nodes also provide healthy CN or
 Global exits. It is designed to complement Cilium routing: Cilium carries
