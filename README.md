@@ -10,7 +10,7 @@ leaving the cluster.
 
 ```bash
 helm install mihomos-cluster \
-  oci://ghcr.io/re8ch/charts/mihomos-cluster \
+  oci://ghcr.io/public-edge/charts/mihomos-cluster \
   --version 0.1.1 \
   --namespace egress-fabric --create-namespace
 ```
