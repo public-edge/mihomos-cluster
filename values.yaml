@@ -13,7 +13,7 @@ nodeProxy:
   geoLabel: networking.re8ch.com/geo
   resources:
     requests: {cpu: 25m, memory: 64Mi}
-    limits: {cpu: 250m, memory: 512Mi}
+    limits: {cpu: 250m, memory: 2Gi}
 
 exits:
   globalLabel: networking.re8ch.com/mihomo-exit
