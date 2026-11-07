@@ -60,6 +60,8 @@ spec:
           args: [-d, /etc/mihomo]
           ports: [{name: mixed, containerPort: {{ $.Values.nodeProxy.port }}}, {name: controller, containerPort: {{ $.Values.nodeProxy.controllerPort }}}]
           readinessProbe: {httpGet: {path: /version, port: controller}, periodSeconds: 5}
+          resources:
+{{ toYaml $.Values.nodeProxy.resources | indent 12 }}
           securityContext: {allowPrivilegeEscalation: false, capabilities: {drop: [ALL]}}
           volumeMounts:
             - {name: config, mountPath: /etc/mihomo/config.yaml, subPath: {{ $geo }}.yaml, readOnly: true}

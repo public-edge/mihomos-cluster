@@ -11,6 +11,9 @@ nodeProxy:
   port: 17891
   controllerPort: 19090
   geoLabel: networking.re8ch.com/geo
+  resources:
+    requests: {cpu: 25m, memory: 64Mi}
+    limits: {cpu: 250m, memory: 512Mi}
 
 exits:
   globalLabel: networking.re8ch.com/mihomo-exit
