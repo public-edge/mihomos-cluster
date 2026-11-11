@@ -19,6 +19,7 @@ exits:
   globalLabel: networking.re8ch.com/mihomo-exit
   cnLabel: networking.re8ch.com/mihomo-exit-cn
   port: 1080
+  controllerPort: 19091
 
 telemetry:
   enabled: true
